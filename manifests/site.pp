@@ -58,6 +58,8 @@ node default {
   include hub
   include nginx
   include chrome
+  include mysql
+  include postgresql
 
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {
