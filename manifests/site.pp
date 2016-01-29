@@ -60,6 +60,7 @@ node default {
   include chrome
   include mysql
   include postgresql
+  include heroku
 
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {
