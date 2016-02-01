@@ -75,9 +75,6 @@ node default {
     ]:
   }
 
-  # node versions
-  nodejs::version { '0.12': }
-
   # default ruby versions
   exec { 'rbenv install 1.9.3':
   }
