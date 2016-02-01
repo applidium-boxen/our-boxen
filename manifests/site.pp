@@ -55,8 +55,6 @@ node default {
   # core modules, needed for most things
   include dnsmasq
   include git
-  include hub
-  include nginx
   include chrome
   include mysql
   include postgresql
@@ -68,19 +66,21 @@ node default {
   }
 
     # common, useful packages
-    package {
-      [
-        'ack',
-        'findutils',
-        'gnu-tar',
-        'rbenv'
-      ]:
-    }
+  package {
+    [
+      'ack',
+      'findutils',
+      'gnu-tar',
+      'rbenv'
+    ]:
+  }
 
   # node versions
   nodejs::version { '0.12': }
 
   # default ruby versions
+  exec { 'rbenv install 1.9.3':
+  }
   ruby::version { '1.9.3': }
   ruby::version { '2.2.4': }
 
