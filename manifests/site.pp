@@ -76,10 +76,8 @@ node default {
   }
 
   # default ruby versions
-  exec { 'rbenv install 1.9.3':
+  exec { 'rbenv install 1.9.3-p551':
   }
-  ruby::version { '1.9.3': }
-  ruby::version { '2.2.4': }
 
 
   file { "${boxen::config::srcdir}/our-boxen":
