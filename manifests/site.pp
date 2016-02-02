@@ -75,8 +75,8 @@ node default {
   }
 
   # default ruby versions
-  ruby::version { '1.9.3': }
   ruby::version { '2.2.4': }
+  ruby::version { '2.3.0': }
 
 
   file { "${boxen::config::srcdir}/our-boxen":
