@@ -52,13 +52,18 @@ Service {
 Homebrew::Formula <| |> -> Package <| |>
 
 node default {
-  # core modules, needed for most things
+  include atom
+  include chrome
   include dnsmasq
   include git
-  include chrome
+  include heroku
+  include java
+  include jumpcut
   include mysql
   include postgresql
-  include heroku
+  include sublime_text
+  include sourcetree
+  include zsh
 
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {
@@ -73,10 +78,35 @@ node default {
       'gnu-tar'
     ]:
   }
+  package { 'android-studio':
+    provider => 'brewcask'
+  }
+  package { 'mac2imgur':
+    provider => 'brewcask'
+  }
+  package { 'slack':
+    provider => 'brewcask'
+  }
 
   # default ruby versions
   ruby::version { '2.2.4': }
   ruby::version { '2.3.0': }
+
+  ruby_gem { 'bundler for all ruby versions':
+    gem => 'bundler',
+    version => '~> 1.1',
+    ruby_version => '*'
+  }
+  ruby_gem { 'cocoapods for 2.2.4':
+    gem => 'cocoapods',
+    version => '~> 0.39.0',
+    ruby_version => '2.2.4'
+  }
+  ruby_gem { 'cocoapods for 2.3.0':
+    gem => 'cocoapods',
+    version => '~> 0.39.0',
+    ruby_version => '2.3.0'
+  }
 
 
   file { "${boxen::config::srcdir}/our-boxen":
