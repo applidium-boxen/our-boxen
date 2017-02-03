@@ -64,11 +64,6 @@ GITHUBTARBALL
     jumpcut (1.0.0)
 
 GITHUBTARBALL
-  remote: boxen/puppet-mysql
-  specs:
-    mysql (2.0.1)
-
-GITHUBTARBALL
   remote: boxen/puppet-openssl
   specs:
     openssl (1.0.0)
@@ -153,7 +148,6 @@ DEPENDENCIES
   java (= 1.8.4)
   jumpcut (= 1.0.0)
   module_data (= 0.0.4)
-  mysql (= 2.0.1)
   openssl (= 1.0.0)
   osx (= 2.8.0)
   pkgconfig (= 1.0.0)
