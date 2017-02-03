@@ -62,7 +62,7 @@ github "sourcetree",  "1.0.0"
 github "zsh",         "1.0.0"
 
 # github "elasticsearch", "2.8.0"
-github "mysql",         "2.0.1"
+#github "mysql",         "2.0.1"
 github "postgresql",  "4.0.1"
 # github "redis",       "3.1.0"
 github "sysctl",      "1.0.1"
