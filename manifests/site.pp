@@ -59,7 +59,7 @@ node default {
   include heroku
   include java
   include jumpcut
-  include mysql
+  #include mysql
   include postgresql
   include sublime_text
   include sourcetree
