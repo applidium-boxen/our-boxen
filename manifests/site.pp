@@ -60,7 +60,7 @@ node default {
   include java
   include jumpcut
   #include mysql
-  include postgresql
+  #include postgresql
   include sublime_text
   include sourcetree
   include zsh
